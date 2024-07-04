@@ -1,0 +1,2083 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: var(--font-size__h5);
+  color: #252525;
+}
+
+body {
+  background-color: var(--page__background) !important;
+}
+
+ol,
+ul {
+  list-style-position: inside;
+}
+
+u {
+  text-underline-offset: 2px;
+  vertical-align: baseline;
+  color: inherit !important;
+}
+
+/* 上標 */
+sup {
+  vertical-align: super !important;
+  font-size: smaller !important;
+  color: inherit !important;
+}
+
+/* 下標 */
+sub {
+  vertical-align: sub !important;
+  font-size: smaller !important;
+  color: inherit !important;
+}
+
+/* 分數樣式 */
+math,
+mfrac,
+mn {
+  color: inherit !important;
+}
+
+/* 章節標題 - 外框 */
+.chapter__title {
+  margin-bottom: var(--space__1);
+  overflow: hidden;
+  display: flex;
+}
+
+/* 章節標題 - 左側內框 */
+.chapter__title-left-block {
+  background-image: linear-gradient(to top right, var(--chapter__titleLightBG), var(--chapter__titleDarkBG));
+  width: 10%;
+}
+
+/* 章節標題 - 中間側內框 */
+.chapter__title-center-block {
+  background-color: var(--chapter__titleCenterBlockBG);
+  min-width: 25%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: var(--chapter__titleCenterBlockText);
+}
+
+/* 章節標題 - 章節英文 */
+.chapter__title-enText {
+  width: 100%;
+  min-width: 100px;
+  padding: 48px 24px 0px;
+  color: var(--chapter__titleCenterBlockText);
+  text-align: right;
+  font-size: var(--font-size__h1);
+  font-weight: 700;
+}
+
+@media screen and (min-width:768px) {
+  .chapter__title-enText {
+    font-size: var(--font-size__h1);
+  }
+}
+
+/* 章節標題 - 章節阿拉伯數字 */
+.chapter__title-enNumber {
+  width: 100%;
+  padding: 8px 24px 24px;
+  color: var(--chapter__titleCenterBlockText);
+  text-align: right;
+  font-size: var(--font-size__chapterNumber);
+  font-weight: 700;
+}
+
+@media screen and (min-width:768px) {
+  .chapter__title-enNumber {
+    font-size: var(--font-size__h0);
+  }
+}
+
+/* 章節標題 - 右側內框 */
+.chapter__title-right-block {
+  background-image: linear-gradient(to top left, var(--chapter__titleLightBG), var(--chapter__titleDarkBG));
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+/* 章節標題 - 章節中文數字 */
+.chapter__title-chNumber {
+  width: 100%;
+  min-width: 100px;
+  padding: 48px 24px 18px;
+  color: var(--chapter__titleRightBlockChNumber);
+  font-size: var(--font-size__h3);
+  font-weight: 700;
+}
+
+@media screen and (min-width:768px) {
+  .chapter__title-chNumber {
+    font-size: var(--font-size__h2);
+  }
+}
+
+/* 章節標題 - 章節中文 */
+.chapter__title-chText {
+  width: 100%;
+  min-width: 100px;
+  padding: 0px 24px 32px;
+  color: var(--chapter__titleRightBlockChText);
+  font-size: var(--font-size__h0);
+  font-weight: 700;
+}
+
+@media screen and (min-width:768px) {
+  .chapter__title-chText {
+    font-size: var(--font-size__h2);
+  }
+}
+
+/* 段落 */
+.part {
+  padding: 0;
+}
+
+/* 段落標題 - 外框 */
+.part__title {
+  background-color: var(--part__titleBG);
+  margin-bottom: var(--space__1);
+  overflow: hidden;
+}
+
+/* 段落標題 - 內框 */
+.part__title .h1 {
+  display: flex;
+  width: 100%;
+}
+
+/* 段落標題 - 段落數字 */
+.part__title-number {
+  width: fit-content;
+  min-width: 60px;
+  flex-shrink: 0;
+  padding: 12px 24px;
+  text-align: center;
+  color: var(--part__title-numberText);
+}
+
+@media screen and (min-width:768px) {
+  .part__title-number {
+    padding: 12px 12px;
+  }
+}
+
+/* 段落標題 - 段落名稱 */
+.part__title-name {
+  background-color: var(--part__title-nameBG);
+  color: var(--part__title-nameText);
+  padding: 12px 24px;
+  width: 100%;
+}
+
+@media screen and (min-width:768px) {
+  .part__title-name {
+    padding: 12px 12px;
+  }
+}
+
+/* 知識區塊 */
+.part__section {
+  margin-bottom: var(--space__1);
+}
+
+/* 知識標題區塊 - 外框 */
+.KP__title {
+  margin-bottom: var(--space__2);
+}
+
+/* 知識標題區塊 - 內框 */
+.KP__title .h2 {
+  display: flex;
+  align-items: center;
+}
+
+/* 知識標題區塊 - 知識標題（icon） */
+.KP__icon {
+  padding: 0 8px;
+  min-width: 100px;
+}
+
+/* 知識標題區塊 - 知識標題（icon）的圖片區塊 */
+.KP__icon img {
+  height: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: contain;
+}
+
+/* 知識標題區塊 - 知識標題（名稱） */
+.KP__name {
+  padding: 0 8px;
+  border-bottom: 4px solid var(--KP__titleBorder);
+}
+
+/* 知識點 - 區塊 */
+.keyPoint__block {
+  margin-bottom: var(--space__1);
+}
+
+/* 知識點 - 標題區塊 */
+.keyPoint__title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 知識點 - 標題 */
+.keyPoint__title {
+  display: flex;
+  width: fit-content;
+  margin-left: 12px;
+  margin-bottom: -4px;
+  height: 100%;
+  min-height: 40px;
+}
+
+@media screen and (min-width:768px) {
+  .keyPoint__title {
+    margin-left: 36px;
+  }
+}
+
+/* 知識點 - 標題數字 */
+.keyPoint__title-number {
+  width: fit-content;
+  padding: 6px 12px;
+  background: var(--keyPoint__titleBG);
+  color: var(--keyPoint__title-numberText);
+  border-radius: 12px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width:768px) {
+  .keyPoint__title-number {
+    border-radius: 20px 0 0 0;
+  }
+}
+
+/* 知識點 - 標題名稱 */
+.keyPoint__title-name {
+  width: fit-content;
+  padding: 6px 12px;
+  background: var(--keyPoint__title-nameBG);
+  color: var(--keyPoint__title-nameText);
+  border-radius: 0 12px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width:768px) {
+  .keyPoint__title-name {
+    border-radius: 0 20px 0 0;
+  }
+}
+
+/* 知識點 - 影片 */
+.keyPoint__video {
+  margin-right: 0px;
+}
+
+@media screen and (min-width:768px) {
+  .keyPoint__video {
+    margin-right: 24px;
+  }
+}
+
+/* 知識點 - 影片 icon */
+.keyPoint__video-button {
+  width: 40px;
+  height: 40px;
+}
+
+/* 知識點內容 - 外框 */
+.keyPoint__content {
+  background-color: var(--white);
+  padding: 12px;
+  border: 4px solid var(--keyPoint__contentBorder);
+  border-radius: 12px;
+}
+
+@media screen and (min-width:768px) {
+  .keyPoint__content {
+    padding: 24px;
+    border: 8px solid var(--keyPoint__contentBorder);
+    border-radius: 24px;
+  }
+}
+
+/* 知識點內容 - 第一層清單 */
+ol.keyPoint__first-title {
+  list-style-type: cjk-ideographic;
+}
+
+/* 知識點內容 - 第一層清單項目 */
+p.keyPoint__title-text,
+li.keyPoint__title-item {
+  margin-bottom: var(--space__3);
+  color: var(--keyPoint__title-itemText);
+}
+
+/* 知識點內容 - 第一層清單項目名稱 */
+.keyPoint__title-item::marker,
+.keyPoint__title-item span.h4 {
+  color: var(--keyPoint__title-itemText);
+  font-weight: 700;
+}
+
+/* 知識點內容 - 第二層清單，分組標籤 */
+.keyPoint__second-tag {
+  display: inline-block;
+  background-color: var(--keyPoint__secondTag);
+  color: var(--white);
+  margin-left: -20px;
+  margin-bottom: var(--space__6);
+  padding: 0px 12px;
+  font-size: var(--font-size__h5);
+}
+
+/* 知識點內容 - 第二層文字 */
+p.keyPoint__second-text {
+  padding-left: 0em;
+}
+
+@media screen and (min-width:768px) {
+  p.keyPoint__second-text {
+    padding-left: 1.4em;
+  }
+}
+
+/* 知識點內容 - 第二層清單 (有序) */
+ol.keyPoint__second-title {
+  margin-top: var(--space__4);
+  margin-bottom: var(--space__4);
+  padding-left: 0em;
+}
+
+@media screen and (min-width:768px) {
+  ol.keyPoint__second-title {
+    padding-left: 0.6em;
+  }
+}
+
+/* 知識點內容 - 第二層清單 (無序) */
+ul.keyPoint__second-title {
+  list-style-type: disc;
+  margin-top: var(--space__4);
+  padding-left: 0em;
+}
+
+@media screen and (min-width:768px) {
+  ul.keyPoint__second-title {
+    padding-left: 0.6em;
+  }
+}
+
+/* 知識點內容 - 第二層清單項目 (有序+無序共用) */
+li.keyPoint__second-item {
+  font-size: var(--font-size__h5);
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+@media screen and (min-width:768px) {
+  li.keyPoint__second-item {
+    padding-left: 1.1em;
+    text-indent: -1.1em;
+  }
+}
+
+/* 知識點內容 - 第二層清單項目標號 (有序) */
+ol li.keyPoint__second-item::marker {
+  color: var(--bluePoint);
+}
+
+/* 知識點內容 - 第二層清單項目標號 (無序) */
+ul li.keyPoint__second-item::marker {
+  color: var(--bluePoint);
+}
+
+/* 知識點內容 - 第二層"例題"清單 (有序+無序共用) */
+span.keyPoint__second-item.example,
+p.keyPoint__second-item.example {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+@media screen and (min-width:768px) {
+  p.keyPoint__second-item.example {
+    padding-left: 2em;
+    text-indent: -2em;
+  }
+}
+
+/* 知識點內容 - 第二層清單項目"例題"標號 (有序+無序共用) */
+span.keyPoint__second-item.example::before,
+p.keyPoint__second-item.example::before {
+  content: '例：';
+  background-color: var(--keyPoint__exampleBG);
+  color: var(--keyPoint__exampleText);
+}
+
+/* 知識點內容 - 第二層"備註"清單 (有序+無序共用) */
+span.keyPoint__second-item.comment,
+p.keyPoint__second-item.comment {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+@media screen and (min-width:768px) {
+  p.keyPoint__second-item.comment {
+    padding-left: 2em;
+    text-indent: -2em;
+  }
+}
+
+/* 知識點內容 - 第二層清單項目"備註"標號 (有序+無序共用) */
+span.keyPoint__second-item.comment::before,
+p.keyPoint__second-item.comment::before {
+  content: '註：';
+  background-color: var(--keyPoint__commentBG);
+  color: var(--keyPoint__commentText);
+}
+
+/* 知識點內容 - 第三層清單 (有序) */
+ol.keyPoint__third-title {
+  margin-top: var(--space__6);
+  margin-bottom: var(--space__6);
+  padding-left: 2em;
+}
+
+@media screen and (min-width:768px) {
+  ol.keyPoint__third-title {
+    padding-left: 1em;
+  }
+}
+
+/* 知識點內容 - 第三層清單 (無序) */
+ul.keyPoint__third-title {
+  list-style: none;
+  margin-top: var(--space__6);
+  margin-bottom: var(--space__6);
+  padding-left: 2em;
+}
+
+@media screen and (min-width:768px) {
+  ul.keyPoint__third-title {
+    padding-left: 2em;
+  }
+}
+
+/* 知識點內容 - 第三層文字 */
+p.keyPoint__third-text {
+  margin-left: -1.85em;
+  text-indent: 0em;
+}
+
+/* 知識點內容 - 第三層清單項目 (有序+無序共用) */
+li.keyPoint__third-item {
+  font-size: var(--font-size__h5);
+  margin-left: -0.9em;
+  text-indent: -0.9em;
+}
+
+/* 知識點內容 - 第三層清單項目標號 (有序) */
+ol li.keyPoint__third-item::marker {
+  color: var(--bluePoint);
+}
+
+/* 知識點內容 - 第三層清單項目標號 (無序) */
+ul li.keyPoint__third-item::before {
+  content: '\2022';
+  color: var(--bluePoint);
+  margin-right: 8px;
+}
+
+/* 知識點內容 - 第三層"例題"清單 (有序+無序共用) */
+span.keyPoint__third-item.example,
+p.keyPoint__third-item.example {
+  padding-left: 1em;
+  text-indent: -2em;
+}
+
+/* 知識點內容 - 第三層清單項目"例題"標號 (有序+無序共用) */
+span.keyPoint__third-item.example::before,
+p.keyPoint__third-item.example::before {
+  content: '例：';
+  background-color: var(--keyPoint__exampleBG);
+  color: var(--keyPoint__exampleText);
+}
+
+/* 知識點內容 - 第三層"備註"清單 (有序+無序共用) */
+span.keyPoint__third-item.comment,
+p.keyPoint__third-item.comment {
+  padding-left: 1em;
+  text-indent: -2em;
+}
+
+/* 知識點內容 - 第三層清單項目"備註"標號 (有序+無序共用) */
+span.keyPoint__third-item.comment::before,
+p.keyPoint__third-item.comment::before {
+  content: '註：';
+  background-color: var(--keyPoint__commentBG);
+  color: var(--keyPoint__commentText);
+}
+
+/* 知識點內容 - 第四層清單 (有序) */
+ol.keyPoint__four-title {
+  margin-top: var(--space__6);
+  margin-bottom: var(--space__6);
+  padding-left: 0.8em;
+}
+
+/* 知識點內容 - 第四層清單 (無序) */
+ul.keyPoint__four-title {
+  list-style: none;
+  margin-top: var(--space__6);
+  margin-bottom: var(--space__6);
+  padding-left: 0.8em;
+}
+
+/* 知識點內容 - 第四層清單項目 (有序) */
+ol.keyPoint__four-title li.keyPoint__four-item {
+  font-size: var(--font-size__h5);
+  text-indent: -1.1em;
+}
+
+/* 知識點內容 - 第四層清單項目 (無序) */
+ul.keyPoint__four-title li.keyPoint__four-item {
+  font-size: var(--font-size__h5);
+  text-indent: -0.9em;
+}
+
+/* 知識點內容 - 第四層文字 (有序) */
+ol.keyPoint__four-title p.keyPoint__four-text {
+  font-size: var(--font-size__h5);
+  text-indent: 0em;
+}
+
+/* 知識點內容 - 第四層文字 (無序) */
+ul.keyPoint__four-title p.keyPoint__four-text {
+  font-size: var(--font-size__h5);
+  text-indent: 0em;
+}
+
+/* 知識點內容 - 第四層清單項目標號 (有序) */
+ol li.keyPoint__four-item::marker {
+  color: var(--bluePoint);
+}
+
+/* 知識點內容 - 第四層清單項目標號 (無序) */
+ul.keyPoint__four-title li.keyPoint__four-item::before {
+  content: '\2022';
+  color: var(--bluePoint);
+  margin-right: 8px;
+}
+
+/* 知識點內容 - 第四層"例題"清單 (有序+無序共用) */
+span.keyPoint__four-item.example,
+p.keyPoint__four-item.example {
+  padding-left: 1em;
+  text-indent: -2.5em;
+}
+
+/* 知識點內容 - 第四層清單項目"例題"標號 (有序+無序共用) */
+span.keyPoint__four-item.example::before,
+p.keyPoint__four-item.example::before {
+  content: '例：';
+  background-color: var(--keyPoint__exampleBG);
+  color: var(--keyPoint__exampleText);
+}
+
+/* 知識點內容 - 第四層"備註"清單 (有序+無序共用) */
+span.keyPoint__four-item.comment,
+p.keyPoint__four-item.comment {
+  padding-left: 1em;
+  text-indent: -2.5em;
+}
+
+/* 知識點內容 - 第四層清單項目"備註"標號 (有序+無序共用) */
+span.keyPoint__four-item.comment::before,
+p.keyPoint__four-item.comment::before {
+  content: '註：';
+  background-color: var(--keyPoint__commentBG);
+  color: var(--keyPoint__commentText);
+}
+
+/* 知識點 - 表格區塊 */
+.keyPoint__table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 2px solid var(--keyPoint__tableBorder);
+  margin-bottom: var(--space__3);
+}
+
+/* 知識點 - 表格表頭 */
+.keyPoint__table-head {
+  width: auto;
+  border: 2px solid var(--keyPoint__tableBorder);
+  background-color: var(--keyPoint__tableHeadBG);
+  font-size: var(--font-size__h7);
+  font-weight: 600;
+  padding: 2px 2px;
+  vertical-align: middle;
+}
+
+@media screen and (min-width:768px) {
+  .keyPoint__table-head {
+    font-size: var(--font-size__h5);
+    padding: 4px 6px;
+  }
+}
+
+/* 知識點 - 表格表頭切割 */
+.keyPoint__table-head.line {
+  background-image: linear-gradient(to top right, var(--keyPoint__tableHeadBG) 49.25%, var(--keyPoint__tableBorder), var(--keyPoint__tableHeadBG) 50.75%);
+}
+
+/* 知識點 - 表格表頭切割 - 水平列文字 */
+.keyPoint__table-head.line p.rowText {
+  text-align: right;
+}
+
+/* 知識點 - 表格表頭切割 - 垂直欄文字 */
+.keyPoint__table-head.line p.columnText {
+  text-align: left;
+}
+
+/* 知識點 - 表格類別格 */
+.keyPoint__table-category {
+  width: auto;
+  border: 2px solid var(--keyPoint__tableBorder);
+  background-color: var(--keyPoint__tableCategoryBG);
+  font-size: var(--font-size__h7);
+  font-weight: 600;
+  padding: 2px 2px;
+  vertical-align: middle;
+}
+
+@media screen and (min-width:768px) {
+  .keyPoint__table-category {
+    font-size: var(--font-size__h5);
+    padding: 4px 6px;
+  }
+}
+
+/* 知識點 - 表格內容 */
+.keyPoint__table-body {
+  width: auto;
+  border: 2px solid var(--keyPoint__tableBorder);
+  background-color: var(--keyPoint__tableContentBG);
+  font-size: var(--font-size__h7);
+  padding: 2px 2px;
+  vertical-align: middle;
+}
+
+@media screen and (min-width:768px) {
+  .keyPoint__table-body {
+    font-size: var(--font-size__h5);
+    padding: 4px 6px;
+  }
+}
+
+/* 知識點 - 表格內容切割 */
+.keyPoint__table-body.line {
+  background-image: linear-gradient(to top right, var(--keyPoint__tableContentBG) 49.25%, var(--keyPoint__tableBorder), var(--keyPoint__tableContentBG) 50.75%);
+}
+
+/* 知識點 - 表格內容的第一層清單 (有序) */
+ol.keyPoint__table-body__first-title {
+  /* list-style-type: disc; */
+}
+
+/* 知識點 - 表格內容的第一層清單 (有序) */
+ol li.keyPoint__table-body__first-item {
+  font-size: var(--font-size__h5);
+  padding-left: 1.5em;
+  text-indent: -1.1em;
+}
+
+/* 知識點 - 表格內容的第一層清單 (無序) */
+ul.keyPoint__table-body__first-title {
+  list-style-type: disc;
+}
+
+/* 知識點 - 表格內容的第一層清單 (無序) */
+ul li.keyPoint__table-body__first-item {
+  font-size: var(--font-size__h5);
+  padding-left: 2em;
+  text-indent: -1.4em;
+}
+
+/* 知識點 - 表格內容的第一層清單項目標號 (有序) */
+ol li.keyPoint__table-body__first-item::marker {
+  color: var(--bluePoint);
+}
+
+/* 知識點 - 表格內容的第一層清單項目標號 (無序) */
+ul li.keyPoint__table-body__first-item::marker {
+  color: var(--bluePoint);
+}
+
+/* 知識點 - 表格內容的第一層文字 */
+p.keyPoint__table-body__first-text {
+  text-indent: 0em;
+}
+
+/* 知識點 - 表格內容的第一層文字"例題"標號 */
+p.keyPoint__table-body__first-text.example {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+/* 知識點 - 表格內容的第一層文字"例題"標號 */
+p.keyPoint__table-body__first-text.example::before {
+  content: '例：';
+  color: var(--white);
+  background-color: var(--keyPoint__tableExampleText);
+  font-weight: 700;
+  padding: 2px;
+}
+
+/* 知識點 - 表格內容的第一層文字"備註"標號 */
+p.keyPoint__table-body__first-text.comment {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+/* 知識點 - 表格內容的第一層文字"備註"標號 */
+p.keyPoint__table-body__first-text.comment::before {
+  content: '註：';
+  color: var(--white);
+  background-color: var(--keyPoint__tableCommentText);
+  font-weight: 700;
+  padding: 2px;
+}
+
+/* 知識點 - 表格內容的第一層文字"星星備註"標號 */
+p.keyPoint__table-body__first-text.star {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+/* 知識點 - 表格內容的第一層文字"星星備註"標號 */
+p.keyPoint__table-body__first-text.star::before {
+  content: '★';
+  color: var(--keyPoint__tableStarText);
+  font-weight: 700;
+  padding: 2px;
+}
+
+/* 知識點 - 表格內容的第二層清單 (無序) */
+ul.keyPoint__table-body__second-title {
+  list-style-type: disc;
+  margin-left: var(--space__4);
+}
+
+/* 知識點 - 表格內容的第二層清單 (無序) */
+li.keyPoint__table-body__second-item {
+  font-size: var(--font-size__h5);
+  padding-left: 0.6em;
+  text-indent: -1.4em;
+}
+
+/* 知識點 - 表格內容的第二層"例題"清單 (無序) */
+li.keyPoint__table-body__second-item.example {
+  padding-left: 0.8em;
+  text-indent: -2em;
+}
+
+/* 知識點 - 表格內容的第二層清單項目標號 (無序) */
+ul li.keyPoint__table-body__second-item::marker {
+  color: var(--bluePoint);
+}
+
+/* 知識點 - 表格內容的第二層清單項目"例題"標號 (無序) */
+ul li.keyPoint__table-body__second-item.example::marker {
+  content: '例：';
+  color: var(--keyPoint__tableExampleText);
+  font-weight: 700;
+}
+
+/* 知識點 - 表格內容的第二層文字 */
+p.keyPoint__table-body__second-text {
+  text-indent: 0em;
+}
+
+/* 知識便利貼 - 區塊 */
+.note__block {
+  margin-bottom: var(--space__1);
+}
+
+/* 知識便利貼 - 標題區塊 */
+.note__title-block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -2px;
+  margin-bottom: var(--space__6);
+}
+
+@media screen and (min-width:768px) {
+  .note__title-block {
+    margin-bottom: var(--space__3);
+  }
+}
+
+/* 知識便利貼內容 - 外框 */
+.note__content {
+  background-color: var(--white);
+  padding: 0 12px 12px;
+  border: 4px solid var(--note__contentBorder);
+  border-radius: 12px;
+}
+
+@media screen and (min-width:768px) {
+  .note__content {
+    padding: 0 24px 24px;
+    border: 8px solid var(--note__contentBorder);
+    border-radius: 24px;
+  }
+}
+
+/* 知識便利貼 - 標題 */
+.note__title {
+  display: flex;
+  width: fit-content;
+  margin-bottom: var(--space__3);
+  margin-left: 0px;
+}
+
+@media screen and (min-width:768px) {
+  .note__title {
+    margin-left: 8px;
+  }
+}
+
+/* 知識便利貼 - 標題名稱 */
+.note__title-name {
+  width: fit-content;
+  padding: 6px 24px;
+  background: var(--note__title-nameBG);
+  color: var(--note__title-nameText);
+  border-radius: 0 0 12px 12px;
+  text-align: center;
+}
+
+@media screen and (min-width:768px) {
+  .note__title-name {
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+/* 知識便利貼 - 小標名稱 */
+.note__content-title .h4 {
+  color: var(--note__content-titleText);
+  font-weight: 700;
+}
+
+/* 知識便利貼 - 表格區塊 */
+.note__table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 2px solid var(--note__tableBorder);
+}
+
+/* 知識便利貼 - 表格表頭 */
+.note__table-head {
+  width: auto;
+  border: 2px solid var(--note__tableBorder);
+  background-color: var(--note__tableHeadBG);
+  font-size: var(--font-size__h7);
+  font-weight: 600;
+  padding: 2px 2px;
+  vertical-align: middle;
+}
+
+@media screen and (min-width:768px) {
+  .note__table-head {
+    font-size: var(--font-size__h5);
+    padding: 4px 6px;
+  }
+}
+
+/* 知識便利貼 - 表格表頭切割 */
+.note__table-head.line {
+  background-image: linear-gradient(to top right, var(--note__tableHeadBG) 49.5%, var(--note__tableBorder), var(--note__tableHeadBG) 50.5%);
+}
+
+/* 知識便利貼 - 表格表頭切割 - 水平列文字 */
+.note__table-head.line p.rowText {
+  text-align: right;
+}
+
+/* 知識便利貼 - 表格表頭切割 - 垂直欄文字 */
+.note__table-head.line p.columnText {
+  text-align: left;
+}
+
+/* 知識便利貼 - 表格類別格 */
+.note__table-category {
+  width: auto;
+  border: 2px solid var(--note__tableBorder);
+  background-color: var(--note__tableCategoryBG);
+  font-size: var(--font-size__h7);
+  font-weight: 600;
+  padding: 2px 2px;
+  vertical-align: middle;
+}
+
+@media screen and (min-width:768px) {
+  .note__table-category {
+    font-size: var(--font-size__h5);
+    padding: 4px 6px;
+  }
+}
+
+/* 知識便利貼 - 表格內容 */
+.note__table-body {
+  width: auto;
+  border: 2px solid var(--note__tableBorder);
+  background-color: var(--note__tableContentBG);
+  font-size: var(--font-size__h7);
+  padding: 2px 2px;
+  vertical-align: middle;
+}
+
+@media screen and (min-width:768px) {
+  .note__table-body {
+    font-size: var(--font-size__h5);
+    padding: 4px 6px;
+  }
+}
+
+/* 知識便利貼 - 表格內容切割 */
+.note__table-body.line {
+  background-image: linear-gradient(to top right, var(--note__tableContentBG) 49.25%, var(--note__tableBorder), var(--note__tableContentBG) 50.75%);
+}
+
+/* 知識便利貼 - 表格內容的第一層清單 (有序) */
+ol.note__table-body__first-title {
+  /* list-style-type: disc; */
+}
+
+/* 知識便利貼 - 表格內容的第一層清單 (有序) */
+ol li.note__table-body__first-item {
+  font-size: var(--font-size__h5);
+  padding-left: 1.5em;
+  text-indent: -1.1em;
+}
+
+/* 知識便利貼 - 表格內容的第一層清單 (無序) */
+ul.note__table-body__first-title {
+  list-style-type: disc;
+}
+
+/* 知識便利貼 - 表格內容的第一層清單 (無序) */
+ul li.note__table-body__first-item {
+  font-size: var(--font-size__h5);
+  padding-left: 2em;
+  text-indent: -1.4em;
+}
+
+/* 知識便利貼 - 表格內容的第一層清單項目標號 (有序) */
+ol li.note__table-body__first-item::marker {
+  color: var(--bluePoint);
+}
+
+/* 知識便利貼 - 表格內容的第一層清單項目標號 (無序) */
+ul li.note__table-body__first-item::marker {
+  color: var(--bluePoint);
+}
+
+/* 知識便利貼 - 表格內容的第一層文字 */
+p.note__table-body__first-text {
+  text-indent: 0em;
+}
+
+/* 知識便利貼 - 表格內容的第一層文字"例題"標號 */
+p.note__table-body__first-text.example {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+/* 知識便利貼 - 表格內容的第一層文字"例題"標號 */
+p.note__table-body__first-text.example::before {
+  content: '例：';
+  color: var(--white);
+  background-color: var(--note__tableExampleText);
+  font-weight: 700;
+  padding: 2px;
+}
+
+/* 知識便利貼 - 表格內容的第一層文字"備註"標號 */
+p.note__table-body__first-text.comment {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+/* 知識便利貼 - 表格內容的第一層文字"備註"標號 */
+p.note__table-body__first-text.comment::before {
+  content: '註：';
+  color: var(--white);
+  background-color: var(--note__tableCommentText);
+  font-weight: 700;
+  padding: 2px;
+}
+
+/* 知識便利貼 - 表格內容的第二層清單 (無序) */
+ul.note__table-body__second-title {
+  list-style-type: disc;
+  margin-left: var(--space__4);
+}
+
+/* 知識便利貼 - 表格內容的第二層清單 (無序) */
+li.note__table-body__second-item {
+  font-size: var(--font-size__h5);
+  padding-left: 0.6em;
+  text-indent: -1.4em;
+}
+
+/* 知識便利貼 - 表格內容的第二層"例題"清單 (無序) */
+li.note__table-body__second-item.example {
+  padding-left: 0.8em;
+  text-indent: -2em;
+}
+
+/* 知識便利貼 - 表格內容的第二層清單項目標號 (無序) */
+ul li.note__table-body__second-item::marker {
+  color: var(--bluePoint);
+}
+
+/* 知識便利貼 - 表格內容的第二層清單項目"例題"標號 (無序) */
+ul li.note__table-body__second-item.example::marker {
+  content: '例：';
+  color: var(--note__tableExampleText);
+  font-weight: 700;
+}
+
+/* 知識便利貼 - 表格內容的第二層文字 */
+p.note__table-body__second-text {
+  text-indent: 0em;
+}
+
+/* 例題 */
+.exercise {
+  padding: 0;
+}
+
+/* 例題 - 區塊 */
+.exercise__block {
+  margin-bottom: var(--space__1);
+}
+
+/* 例題 - 標題區塊 */
+.exercise__title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 例題 - 知識點標題 */
+.exercise__title {
+  display: flex;
+  width: fit-content;
+  margin-left: 12px;
+  margin-bottom: -4px;
+  height: 100%;
+  min-height: 40px;
+}
+
+@media screen and (min-width:768px) {
+  .exercise__title {
+    margin-left: 36px;
+  }
+}
+
+/* 例題 - 知識點標題數字 */
+.exercise__title-number {
+  width: fit-content;
+  padding: 6px 12px;
+  background: var(--exercise__titleBG);
+  color: var(--exercise__title-numberText);
+  border-radius: 12px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width:768px) {
+  .exercise__title-number {
+    border-radius: 20px 0 0 0;
+  }
+}
+
+/* 例題 - 知識點標題名稱 */
+.exercise__title-name {
+  width: fit-content;
+  padding: 6px 12px;
+  background: var(--exercise__title-nameBG);
+  color: var(--exercise__title-nameText);
+  border-radius: 0 12px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width:768px) {
+  .exercise__title-name {
+    border-radius: 0 20px 0 0;
+  }
+}
+
+/* 例題 - 影片 */
+.exercise__video {
+  margin-right: 0px;
+}
+
+@media screen and (min-width:768px) {
+  .exercise__video {
+    margin-right: 24px;
+  }
+}
+
+/* 例題 - 知識點 - 影片 */
+.exercise__video-button {
+  width: 40px;
+  height: 40px;
+}
+
+/* 例題 - 知識點內容 - 外框 */
+.exercise-teacher__content {
+  background-color: var(--white);
+  padding: 0 12px 12px;
+  border: 4px solid var(--exercise__contentBorder);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+}
+
+@media screen and (min-width:768px) {
+  .exercise-teacher__content {
+    padding: 0 24px 24px;
+    border: 8px solid var(--exercise__contentBorder);
+    border-bottom: none;
+    border-radius: 24px 24px 0 0;
+  }
+}
+
+/* 例題 - 老師說 - 標題區塊 */
+.exercise-teacher__title-block {
+  display: flex;
+  justify-content: end;
+  margin-top: -4px;
+  margin-bottom: var(--space__6);
+}
+
+@media screen and (min-width:768px) {
+  .exercise-teacher__title-block {
+    margin-top: -8px;
+  }
+}
+
+/* 例題 - 老師說 - 標題 */
+.exercise-teacher__title {
+  display: flex;
+  width: fit-content;
+  margin-right: 8px;
+}
+
+/* 例題 - 老師說 - 標題名稱 */
+.exercise-teacher__title-name {
+  width: fit-content;
+  padding: 6px 24px;
+  background: var(--exercise-teacher__title-nameBG);
+  color: var(--exercise-teacher__title-nameText);
+  border-radius: 0 0 12px 12px;
+  text-align: center;
+}
+
+@media screen and (min-width:768px) {
+  .exercise-teacher__title-name {
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+/* 例題 - 老師說 - 例題題目群組 */
+p.exercise-teacher__question-group-title {
+  margin-top: var(--space__3);
+  margin-bottom: var(--space__3);
+  padding: var(--space__5);
+  border: 1px solid var(--exercise-teacher__questionGroupBorder);
+  border-radius: 8px;
+}
+
+/* 例題 - 老師說 - 例題題目清單 */
+ol.exercise-teacher__question {
+  list-style: none;
+  counter-reset: my-counter;
+}
+
+/* 例題 - 老師說 - 例題題目清單 */
+li.exercise-teacher__question-title {
+  font-size: var(--font-size__h5);
+  /*  使用自訂標號  */
+  counter-increment: my-counter;
+  padding-left: 4.8em;
+  /* 段落首行縮排 */
+  text-indent: -4.8em;
+}
+
+/* 例題 - 老師說 - 例題題目清單"自訂標號" */
+li.exercise-teacher__question-title::before {
+  content: "(　　　) " counter(my-counter)". ";
+}
+
+/* 例題 - 老師說 - 例題題目清單"自訂標號" - 非選題 */
+li.exercise-teacher__question-title.write::before {
+  content: " " counter(my-counter)". ";
+}
+
+/* 例題 - 老師說 - 例題題目選項 */
+ol.exercise-teacher__option {
+  list-style: none;
+  counter-reset: list-counter;
+}
+
+/* 例題 - 老師說 - 例題題目選項 */
+li.exercise-teacher__option-item {
+  font-size: var(--font-size__h5);
+  /*  使用自訂標號  */
+  counter-increment: list-counter;
+  padding-left: 1.6em;
+  /* 段落首行縮排 */
+  text-indent: -1.6em;
+}
+
+/* 例題 - 老師說 - 例題題目選項"自訂標號" */
+li.exercise-teacher__option-item::before {
+  content: "(" counter(list-counter, upper-alpha) ") ";
+}
+
+/* 例題 - 老師說 - 例題題目非選題 */
+p.exercise-teacher__write-item {
+  display: inline-block;
+  padding-left: 1.4em;
+  font-size: var(--font-size__h6);
+  text-align: center;
+  font-weight: 500;
+}
+/* 例題 - 老師說 - 例題題目非選題標籤 */
+span.exercise-teacher__write-item-tag {
+  background-color: var(--blackTag);
+  color: var(--white);
+  padding: 4px;
+}
+
+/* 例題 - 老師說 - 答案區塊 */
+.exercise-teacher__answer {
+  margin-top: var(--space__0);
+}
+
+/* 例題 - 老師說 - 答案選項 */
+li.exercise-teacher__answer-item {
+  font-size: var(--font-size__h5);
+}
+
+/* 例題 - 老師說 - 答案標籤 */
+.exercise-teacher__answer-tag {
+  display: inline-block;
+  background-color: var(--exercise-teacher__answerTag);
+  color: var(--white);
+  padding: 0px 12px;
+  font-size: var(--font-size__h5);
+}
+
+/* 例題 - 老師說 - 解析區塊 */
+.exercise-teacher__resolve {
+  margin-top: var(--space__4);
+}
+
+/* 例題 - 老師說 - 解析標籤 */
+.exercise-teacher__resolve-tag {
+  display: inline-block;
+  background-color: var(--exercise-teacher__resolveTag);
+  color: var(--white);
+  padding: 0px 12px;
+  font-size: var(--font-size__h5);
+}
+
+/* 例題 - 老師說 - 解析項目 */
+li.exercise-teacher__resolve-item {
+  font-size: var(--font-size__h5);
+  padding-left: 1.1em;
+  text-indent: -1.1em;
+}
+
+/* 例題 - 老師說 - 解析項目 */
+p.exercise-teacher__resolve-item {
+  font-size: var(--font-size__h5);
+  padding-left: 1.1em;
+  text-indent: -1.1em;
+}
+
+/* 例題 - 學生練 - 外框 */
+.exercise-student__content {
+  background-color: var(--exercise-student__contentBG);
+  padding: 0 12px 12px;
+  border: 4px solid var(--exercise__contentBorder);
+  border-radius: 0 0 12px 12px;
+}
+
+@media screen and (min-width:768px) {
+  .exercise-student__content {
+    padding: 0 24px 24px;
+    border: 8px solid var(--exercise__contentBorder);
+    border-radius: 0 0 24px 24px;
+  }
+}
+
+/* 例題 - 學生練 - 標題區塊 */
+.exercise-student__title-block {
+  display: flex;
+  justify-content: end;
+  margin-top: -4px;
+  margin-bottom: var(--space__6);
+}
+
+@media screen and (min-width:768px) {
+  .exercise-student__title-block {
+    margin-top: -8px;
+  }
+}
+
+/* 例題 - 學生練 - 標題 */
+.exercise-student__title {
+  display: flex;
+  width: fit-content;
+  margin-right: 8px;
+}
+
+/* 例題 - 學生練 - 標題名稱 */
+.exercise-student__title-name {
+  width: fit-content;
+  padding: 6px 24px;
+  background: var(--exercise-student__title-nameBG);
+  color: var(--exercise-student__title-nameText);
+  border-radius: 0 0 12px 12px;
+  text-align: center;
+}
+
+@media screen and (min-width:768px) {
+  .exercise-student__title-name {
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+/* 例題 - 學生練 - 例題題目群組 */
+p.exercise-student__question-group-title {
+  margin-top: var(--space__3);
+  margin-bottom: var(--space__3);
+  padding: var(--space__5);
+  border: 1px solid var(--exercise-student__questionGroupBorder);
+  border-radius: 8px;
+}
+
+/* 例題 - 學生練 - 例題題目清單 */
+ol.exercise-student__question {
+  list-style: none;
+  counter-reset: my-counter;
+}
+
+/* 例題 - 學生練 - 例題題目清單 */
+li.exercise-student__question-title {
+  font-size: var(--font-size__h5);
+  /*  使用自訂標號  */
+  counter-increment: my-counter;
+  padding-left: 4.8em;
+  /* 段落首行縮排 */
+  text-indent: -4.8em;
+}
+
+/* 例題 - 學生練 - 例題題目清單"自訂標號" */
+li.exercise-student__question-title::before {
+  content: "(　　　) " counter(my-counter)". ";
+}
+
+/* 例題 - 學生練 - 例題題目清單"自訂標號" - 非選題 */
+li.exercise-student__question-title.write::before {
+  content: " " counter(my-counter)". ";
+}
+
+/* 例題 - 學生練 - 例題題目選項 */
+ol.exercise-student__option {
+  list-style: none;
+  counter-reset: list-counter;
+}
+
+/* 例題 - 學生練 - 例題題目選項 */
+li.exercise-student__option-item {
+  font-size: var(--font-size__h5);
+  /*  使用自訂標號  */
+  counter-increment: list-counter;
+  padding-left: 1.6em;
+  /* 段落首行縮排 */
+  text-indent: -1.6em;
+}
+
+/* 例題 - 學生練 - 例題題目選項"自訂標號" */
+li.exercise-student__option-item::before {
+  content: "(" counter(list-counter, upper-alpha) ") ";
+}
+
+/* 例題 - 學生練 - 例題題目非選題 */
+p.exercise-student__write-item {
+  display: inline-block;
+  padding-left: 1.4em;
+  font-size: var(--font-size__h6);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* 例題 - 學生練 - 例題題目非選題標籤 */
+span.exercise-student__write-item-tag {
+  background-color: var(--blackTag);
+  color: var(--white);
+  padding: 4px;
+}
+
+/* 例題 - 學生練 - 答案區塊 */
+.exercise-student__answer {
+  margin-top: var(--space__0);
+}
+
+/* 例題 - 學生練 - 答案選項 */
+li.exercise-student__answer-item {
+  font-size: var(--font-size__h5);
+}
+
+/* 例題 - 學生練 - 答案標籤 */
+.exercise-student__answer-tag {
+  display: inline-block;
+  background-color: var(--exercise-student__answerTag);
+  color: var(--white);
+  padding: 0px 12px;
+  font-size: var(--font-size__h5);
+}
+
+/* 例題 - 學生練 - 解析區塊 */
+.exercise-student__resolve {
+  margin-top: var(--space__4);
+}
+
+/* 例題 - 學生練 - 解析標籤 */
+.exercise-student__resolve-tag {
+  display: inline-block;
+  background-color: var(--exercise-student__resolveTag);
+  color: var(--white);
+  padding: 0px 12px;
+  font-size: var(--font-size__h5);
+}
+
+/* 例題 - 學生練 - 解析項目 */
+li.exercise-student__resolve-item {
+  font-size: var(--font-size__h5);
+  padding-left: 1.1em;
+  text-indent: -1.1em;
+}
+
+/* 例題 - 學生練 - 解析項目 */
+p.exercise-student__resolve-item {
+  font-size: var(--font-size__h5);
+  padding-left: 1.1em;
+  text-indent: -1.1em;
+}
+
+/* 例題 - 段考精選 */
+.exercise-examination {
+  padding: 0;
+}
+
+/* 例題 - 段考精選 - 區塊 */
+.exercise-examination__block {
+  margin-bottom: var(--space__1);
+}
+
+/* 例題 - 段考精選標題 - 區塊(KP) */
+.exercise-exam__title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 例題 - 段考精選 - 標題(KP) */
+.exercise-exam__title {
+  display: flex;
+  width: fit-content;
+  margin-left: 12px;
+  margin-bottom: -4px;
+  height: 100%;
+  min-height: 40px;
+}
+
+@media screen and (min-width:768px) {
+  .exercise-exam__title {
+    margin-left: 36px;
+  }
+}
+
+/* 例題 - 段考精選 - 標題數字(KP) */
+.exercise-exam__title-number {
+  width: fit-content;
+  min-width: 100px;
+  padding: 6px 12px;
+  background: var(--exercise-examination__titleBG);
+  color: var(--exercise-examination__title-numberText);
+  border-radius: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width:768px) {
+  .exercise-exam__title-number {
+    border-radius: 20px 0 0 0;
+  }
+}
+
+/* 例題 - 段考精選 - 標題名稱(KP) */
+.exercise-exam__title-name {
+  width: fit-content;
+  padding: 6px 12px;
+  background: var(--exercise-exam__title-nameBG);
+  color: var(--exercise-examination__title-nameText);
+  border-radius: 0 20px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width:768px) {
+  .exercise-exam__title-name {
+    border-radius: 0 20px 0 0;
+  }
+}
+
+/* 例題 - 段考精選內容 - 外框 */
+.exercise-examination__content {
+  background-color: var(--white);
+  padding: 24px;
+  border: 8px solid var(--exercise-examination__contentBorder);
+  border-radius: 24px;
+}
+
+/* 例題 - 段考精選 - 標題區塊(文字-段考精選) */
+.exercise-examination__title-block {
+  display: flex;
+  justify-content: end;
+  margin-top: -32px;
+  margin-bottom: var(--space__6);
+}
+
+/* 例題 - 段考精選 - 標題(文字-段考精選) */
+.exercise-examination__title {
+  display: flex;
+  width: fit-content;
+  margin-right: 8px;
+}
+
+/* 例題 - 段考精選 - 標題名稱(文字-段考精選) */
+.exercise-examination__title-name {
+  width: fit-content;
+  padding: 6px 24px;
+  background: var(--exercise-examination__title-nameBG);
+  color: var(--exercise-examination__title-nameText);
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+}
+
+/* 例題 - 段考精選 - 例題題目清單 */
+ol.exercise-examination__question {
+  list-style: none;
+  counter-reset: my-counter;
+}
+
+/* 例題 - 段考精選 - 例題題目清單 */
+li.exercise-examination__question-title {
+  font-size: var(--font-size__h5);
+  /*  使用自訂標號  */
+  counter-increment: my-counter;
+  padding-left: 4.8em;
+  /* 段落首行縮排 */
+  text-indent: -4.8em;
+}
+
+/* 例題 - 段考精選 - 例題題目清單"自訂標號" */
+li.exercise-examination__question-title::before {
+  content: "(　　　) " counter(my-counter)". ";
+}
+
+/* 例題 - 段考精選 - 例題題目清單"自訂標號" - 非選題 */
+li.exercise-examination__question-title.write::before {
+  content: " " counter(my-counter)". ";
+}
+
+/* 例題 - 段考精選 - 例題題目選項 */
+ol.exercise-examination__option {
+  list-style: none;
+  counter-reset: list-counter;
+}
+
+/* 例題 - 段考精選 - 例題題目選項 */
+li.exercise-examination__option-item {
+  font-size: var(--font-size__h5);
+  /*  使用自訂標號  */
+  counter-increment: list-counter;
+  padding-left: 4.8em;
+  /* 段落首行縮排 */
+  text-indent: -4.8em;
+}
+
+/* 例題 - 段考精選 - 例題題目選項"自訂標號" */
+li.exercise-examination__option-item::before {
+  content: "(" counter(list-counter, upper-alpha) ") ";
+}
+
+/* 例題 - 段考精選 - 例題題目非選題 */
+p.exercise-examination__write-item {
+  display: inline-block;
+  padding-left: 1.4em;
+  font-size: var(--font-size__h6);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* 例題 - 段考精選 - 例題題目非選題標籤 */
+span.exercise-examination__write-item-tag {
+  background-color: var(--blackTag);
+  color: var(--white);
+  padding: 4px;
+}
+
+/* 例題 - 段考精選 - 答案區塊 */
+.exercise-examination__answer {
+  margin-top: var(--space__0);
+}
+
+/* 例題 - 段考精選 - 答案選項 */
+li.exercise-examination__answer-item {
+  font-size: var(--font-size__h5);
+}
+
+/* 例題 - 段考精選 - 答案標籤 */
+.exercise-examination__answer-tag {
+  display: inline-block;
+  background-color: var(--exercise-examination__answerTag);
+  color: var(--white);
+  padding: 0px 12px;
+  font-size: var(--font-size__h5);
+}
+
+/* 例題 - 段考精選 - 解析區塊 */
+.exercise-examination__resolve {
+  margin-top: var(--space__4);
+}
+
+/* 例題 - 段考精選 - 解析標籤 */
+.exercise-examination__resolve-tag {
+  display: inline-block;
+  background-color: var(--exercise-examination__resolveTag);
+  color: var(--white);
+  padding: 0px 12px;
+  font-size: var(--font-size__h5);
+}
+
+/* 例題 - 段考精選 - 解析項目 */
+li.exercise-examination__resolve-item {
+  font-size: var(--font-size__h5);
+  padding-left: 1.1em;
+  text-indent: -1.1em;
+}
+
+/* 例題 - 段考精選 - 解析項目 */
+p.exercise-examination__resolve-item {
+  font-size: var(--font-size__h5);
+  padding-left: 1.1em;
+  text-indent: -1.1em;
+}
+
+/* 例題 - 表格區塊 */
+.exercise__table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 2px solid var(--exercise__tableBorder);
+  margin-bottom: var(--space__3);
+}
+
+/* 例題 - 表格表頭 */
+.exercise__table-head {
+  width: auto;
+  border: 2px solid var(--exercise__tableBorder);
+  background-color: var(--exercise__tableHeadBG);
+  font-size: var(--font-size__h7);
+  font-weight: 600;
+  padding: 2px 2px;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .exercise__table-head {
+    font-size: var(--font-size__h5);
+    padding: 4px 6px;
+  }
+}
+
+/* 例題 - 表格表頭切割 */
+.exercise__table-head.line {
+  background-image: linear-gradient(to top right, var(--exercise__tableHeadBG) 49.25%, var(--exercise__tableBorder), var(--exercise__tableHeadBG) 50.75%);
+}
+
+/* 例題 - 表格表頭切割 - 水平列文字 */
+.exercise__table-head.line p.rowText {
+  text-align: right;
+}
+
+/* 例題 - 表格表頭切割 - 垂直欄文字 */
+.exercise__table-head.line p.columnText {
+  text-align: left;
+}
+
+/* 例題 - 表格類別格 */
+.exercise__table-category {
+  width: auto;
+  border: 2px solid var(--exercise__tableBorder);
+  background-color: var(--exercise__tableCategoryBG);
+  font-size: var(--font-size__h7);
+  font-weight: 600;
+  padding: 2px 2px;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .exercise__table-category {
+    font-size: var(--font-size__h5);
+    padding: 4px 6px;
+  }
+}
+
+/* 例題 - 表格內容 */
+.exercise__table-body {
+  width: auto;
+  border: 2px solid var(--exercise__tableBorder);
+  background-color: var(--exercise__tableContentBG);
+  font-size: var(--font-size__h7);
+  padding: 2px 2px;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .exercise__table-body {
+    font-size: var(--font-size__h5);
+    padding: 4px 6px;
+  }
+}
+
+/* 知例題 - 表格內容切割 */
+.exercise__table-body.line {
+  background-image: linear-gradient(to top right, var(--exercise__tableContentBG) 49.25%, var(--exercise__tableBorder), var(--exercise__tableContentBG) 50.75%);
+}
+
+/* 例題 - 表格內容的第一層清單 (有序) */
+ol.exercise__table-body__first-title {
+  /* list-style-type: disc; */
+}
+
+/* 例題 - 表格內容的第一層清單 (有序) */
+ol li.exercise__table-body__first-item {
+  font-size: var(--font-size__h5);
+  padding-left: 1.5em;
+  text-indent: -1.1em;
+}
+
+/* 例題 - 表格內容的第一層清單 (無序) */
+ul.exercise__table-body__first-title {
+  list-style-type: disc;
+}
+
+/* 例題 - 表格內容的第一層清單 (無序) */
+ul li.exercise__table-body__first-item {
+  font-size: var(--font-size__h5);
+  padding-left: 2em;
+  text-indent: -1.4em;
+}
+
+/* 例題 - 表格內容的第一層清單項目標號 (有序) */
+ol li.exercise__table-body__first-item::marker {
+  color: var(--bluePoint);
+}
+
+/* 例題 - 表格內容的第一層清單項目標號 (無序) */
+ul li.exercise__table-body__first-item::marker {
+  color: var(--bluePoint);
+}
+
+/* 例題 - 表格內容的第一層文字 */
+p.exercise__table-body__first-text {
+  text-indent: 0em;
+}
+
+/* 例題 - 表格內容的第一層文字"例題"標號 */
+p.exercise__table-body__first-text.example {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+/* 例題 - 表格內容的第一層文字"例題"標號 */
+p.exercise__table-body__first-text.example::before {
+  content: '例：';
+  color: var(--white);
+  background-color: var(--exercise__tableExampleText);
+  font-weight: 700;
+  padding: 2px;
+}
+
+/* 例題 - 表格內容的第一層文字"備註"標號 */
+p.exercise__table-body__first-text.comment {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+/* 例題 - 表格內容的第一層文字"備註"標號 */
+p.exercise__table-body__first-text.comment::before {
+  content: '註：';
+  color: var(--white);
+  background-color: var(--exercise__tableCommentText);
+  font-weight: 700;
+  padding: 2px;
+}
+
+/* 例題 - 表格內容的第二層清單 (無序) */
+ul.exercise__table-body__second-title {
+  list-style-type: disc;
+  margin-left: var(--space__4);
+}
+
+/* 例題 - 表格內容的第二層清單 (無序) */
+li.exercise__table-body__second-item {
+  font-size: var(--font-size__h5);
+  padding-left: 0.6em;
+  text-indent: -1.4em;
+}
+
+/* 例題 - 表格內容的第二層"例題"清單 (有序+無序) */
+li.exercise__table-body__second-item.example {
+  padding-left: 0.8em;
+  text-indent: -2em;
+}
+
+/* 例題 - 表格內容的第二層清單項目標號 (無序) */
+ul li.exercise__table-body__second-item::marker {
+  color: var(--bluePoint);
+}
+
+/* 例題 - 表格內容的第二層清單項目"例題"標號 (無序) */
+ul li.exercise__table-body__second-item.example::marker {
+  content: '例：';
+  color: var(--exercise__tableExampleText);
+  font-weight: 700;
+}
+
+/* 例題 - 表格內容的第二層文字 */
+p.exercise__table-body__second-text {
+  text-indent: 0em;
+}
+
+/* 綜合練習 */
+.practice {
+  padding: var(--space__5);
+  padding-bottom: var(--space__chapter);
+}
+
+@media (min-width: 768px) {
+  .practice {
+    padding: var(--space__3);
+  }
+}
+
+/* 綜合練習標題 - 外框 */
+.practice__title {
+  margin-bottom: var(--space__2);
+  overflow: hidden;
+}
+
+/* 綜合練習標題 - 內框 */
+.practice__title .h2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* 綜合練習標題 - 段落名稱 */
+.practice__title-name {
+  margin-right: 6px;
+  padding: 0px 10px;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .practice__title-name {
+    margin-right: var(--space__6);
+    padding: 0px 14px;
+  }
+}
+
+/* 綜合練習標題 - 段落名稱 - 章節樣式 */
+.practice__title-name.chatper {
+  background-color: var(--practice__title-chapterBG);
+  color: var(--white);
+}
+
+/* 綜合練習標題 - 段落名稱 - 文字樣式 */
+.practice__title-name.word {
+  background-color: var(--practice__title-wordBG);
+  color: var(--white);
+}
+
+/* 綜合練習標題 - 例題題目清單 */
+ol.practice__question {
+  list-style: none;
+  counter-reset: my-counter;
+}
+
+/* 綜合練習標題 - 例題題目清單 */
+li.practice__question-title {
+  font-size: var(--font-size__h5);
+  /*  使用自訂標號  */
+  counter-increment: my-counter;
+  padding-left: 4.8em;
+  /* 段落首行縮排 */
+  text-indent: -4.8em;
+}
+
+/* 綜合練習標題 - 例題題目清單"自訂標號" */
+li.practice__question-title::before {
+  content: "(　　　) " counter(my-counter)". ";
+}
+
+/* 綜合練習標題 - 例題題目清單"自訂標號" - 非選題 */
+li.practice__question-title.write::before {
+  content: " " counter(my-counter)". ";
+}
+
+/* 綜合練習標題 - 例題題目群組 */
+p.practice__question-group-title {
+  margin-top: var(--space__3);
+  margin-bottom: var(--space__3);
+  padding: var(--space__5);
+  border: 1px solid var(--practice__questionGroupBorder);
+  border-radius: 8px;
+}
+
+/* 綜合練習標題 - 例題題目選項 */
+ol.practice__option {
+  list-style: none;
+  counter-reset: list-counter;
+}
+
+/* 綜合練習標題 - 例題題目選項 */
+li.practice__option-item {
+  /*  使用自訂標號  */
+  counter-increment: list-counter;
+  padding-left: 1.6em;
+  /* 段落首行縮排 */
+  text-indent: -1.6em;
+}
+
+/* 綜合練習標題 - 例題題目選項"自訂標號" */
+li.practice__option-item::before {
+  content: "(" counter(list-counter, upper-alpha) ") ";
+}
+
+/* 綜合練習標題 - 例題題目非選題 */
+p.practice__write-item {
+  display: inline-block;
+  padding-left: 1.4em;
+  font-size: var(--font-size__h6);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* 綜合練習標題 - 例題題目非選題標籤 */
+span.practice__write-item-tag {
+  background-color: var(--blackTag);
+  color: var(--white);
+  padding: 4px;
+}
+
+/* 綜合練習標題 - 答案區塊 */
+.practice__answer {
+  margin-top: var(--space__0);
+}
+
+/* 綜合練習標題 - 答案標籤 */
+.practice__answer-tag span {
+  display: inline-block;
+  background-color: var(--practice__title__answerTag);
+  color: var(--white);
+  padding: 0px 12px;
+  font-size: var(--font-size__h5);
+}
+
+/* 綜合練習標題 - 答案清單 */
+ol.practice__answer {
+  list-style: none;
+  counter-reset: my-counter;
+}
+
+/* 綜合練習標題 - 答案項目 */
+li.practice__answer-item {
+  display: inline-block;
+  font-size: var(--font-size__h5);
+  margin-right: var(--space__6);
+  /*  使用自訂標號  */
+  counter-increment: my-counter;
+}
+
+/* 綜合練習標題 - 答案項目"自訂標號" */
+li.practice__answer-item::before {
+  content: counter(my-counter)". ";
+}
+
+/* 綜合練習標題 - 解析區塊 */
+.practice__resolve {
+  margin-top: var(--space__4);
+}
+
+/* 綜合練習標題 - 解析標籤 */
+.practice__resolve-tag span {
+  display: inline-block;
+  background-color: var(--practice__title__resolveTag);
+  color: var(--white);
+  padding: 0px 12px;
+  font-size: var(--font-size__h5);
+}

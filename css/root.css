@@ -1,0 +1,233 @@
+:root {
+
+  /* 使用方法
+  1- 找到該科系的主色，如理化為#2eb8ac
+  2- 調整至 hsl 模式，找到三碼，如理化為hsl(175, 60%, 45%)，依序填入175、60%、45%
+  */
+
+  /* 主色系 */
+  /* 理化：hsl(175, 60%, 45%)；公民：hsl(331, 95%, 50%)；歷史：hsl(21, 95%, 50%) */
+  /* ↓↓↓ 請調整 ↓↓↓ */
+  --primary-hue: 175;  /* 色相 */
+  --primary-sat: 60%; /* 飽和 */
+  --primary-light: 45%; /* 明度 */
+  /* ↑↑↑ 請調整 ↑↑↑ */
+  --primary-100: hsl(var(--primary-hue), calc(var(--primary-sat)), calc(var(--primary-light)));
+  --primary-80: hsl(calc(var(--primary-hue)), calc(var(--primary-sat) * 0.9), calc(var(--primary-light) * 1.2));
+  --primary-50: hsl(calc(var(--primary-hue)), calc(var(--primary-sat) * 0.9), calc(var(--primary-light) * 1.5));
+  --primary-30: hsl(calc(var(--primary-hue)), calc(var(--primary-sat) * 0.6), calc(var(--primary-light) * 1.9));
+  --primary-10: hsl(calc(var(--primary-hue)), calc(var(--primary-sat) * 0.6), calc(var(--primary-light) * 1.8));
+  --primary-0: hsl(calc(var(--primary-hue)), calc(var(--primary-sat) * 0.5), calc(var(--primary-light) * 2.1));
+
+  /* 例題講解 */
+  /* 理化：hsl(325, 80%, 50%)；公民：hsl(20, 80%, 50%)；歷史：hsl(25, 50%, 50%) */
+    /* ↓↓↓ 請調整 ↓↓↓ */
+  --exercise-hue: 325;
+  --exercise-sat: 80%;
+  --exercise-light: 50%;
+    /* ↑↑↑ 請調整 ↑↑↑ */
+  --exercise-100: hsl(var(--exercise-hue), var(--exercise-sat), var(--exercise-light));
+  --exercise-50: hsl(calc(var(--exercise-hue)), calc(var(--exercise-sat) * 1.2), calc(var(--exercise-light) * 1.25));
+  --exercise-30: hsl(calc(var(--exercise-hue)), calc(var(--exercise-sat) * 0.9), calc(var(--exercise-light) * 1.5));
+  --exercise-10: hsl(calc(var(--exercise-hue)), calc(var(--exercise-sat) * 0.9), calc(var(--exercise-light) * 1.9));
+
+
+  /* 頁面底色 */
+  --page__background: var(--primary-0);
+
+  /* 章節標題 - 背景色 */
+  --chapter__titleLightBG: var(--primary-50);
+  --chapter__titleDarkBG: var(--primary-100);
+  /* 章節標題 - 中間內框背景色 */
+  --chapter__titleCenterBlockBG: #ffffff;
+  /* 章節標題 - 中間內框文字顏色 */
+  --chapter__titleCenterBlockText: var(--primary-100);
+  /* 章節標題 - 右側內框中文數字顏色 */
+  --chapter__titleRightBlockChNumber: #FFFA2D;
+  /* 章節標題 - 右側內框中文顏色 */
+  --chapter__titleRightBlockChText: var(--primary-0);
+
+  /* 段落標題 - 背景色 */
+  --part__titleBG: var(--primary-10);
+  /* 段落標題 - 數字顏色 */
+  --part__title-numberText: var(--primary-100);
+  /* 段落標題 - 名稱背景色 */
+  --part__title-nameBG: var(--primary-100);
+  /* 段落標題 - 名稱顏色 */
+  --part__title-nameText: #ffffff;
+
+  /* 知識標題 - 底線顏色 */
+  --KP__titleBorder: var(--primary-100);
+
+  /* 知識點 - 標題 - 背景色 */
+  --keyPoint__titleBG: var(--primary-100);
+  /* 知識點 - 標題 - 數字顏色 */
+  --keyPoint__title-numberText: #FFFA2D;
+  /* 知識點 - 標題 - 名稱背景色 */
+  --keyPoint__title-nameBG: var(--primary-80);
+  /* 知識點 - 標題 - 名稱顏色 */
+  --keyPoint__title-nameText: #ffffff;
+  /* 知識點 - 外框顏色 */
+  --keyPoint__contentBorder: var(--primary-100);
+  /* 知識點 - 第一層清單顏色 */
+  --keyPoint__title-itemText: var(--primary-100);
+  /* 知識點 - 第二層清單，分組標籤 */
+  --keyPoint__secondTag: var(--primary-100);
+  /* 知識點 - 例題清單背景色 */
+  --keyPoint__exampleBG: #D24716;
+  /* 知識點 - 例題清單文字色 */
+  --keyPoint__exampleText: var(--primary-0);
+  /* 知識點 - 註解清單背景色 */
+  --keyPoint__commentBG: #A356E5;
+  /* 知識點 - 註解清單文字色 */
+  --keyPoint__commentText: var(--primary-0);
+
+  /* 知識點 - 表格外框顏色 */
+  --keyPoint__tableBorder: var(--primary-100);
+  /* 知識點 - 表格表頭背景色 */
+  --keyPoint__tableHeadBG: var(--primary-50);
+  /* 知識點 - 表格類別格背景色 */
+  --keyPoint__tableCategoryBG: var(--primary-30);
+  /* 知識點 - 表格背景色 */
+  --keyPoint__tableContentBG: #ffffff;
+  /* 知識點 - 表格內容範例 Tag 文字 */
+  --keyPoint__tableExampleText: var(--primary-100);
+  /* 知識點 - 表格內容註解 Tag 文字 */
+  --keyPoint__tableCommentText: #A356E5;
+  /* 知識點 - 表格內容星星 Tag 文字 */
+  --keyPoint__tableStarText: #00AFA5;
+
+  /* 知識便利貼 - 標題 - 名稱背景色 */
+  --note__title-nameBG: #85C35E;
+  /* 知識便利貼 - 標題 - 名稱顏色 */
+  --note__title-nameText: var(--primary-0);
+  /* 知識便利貼 - 外框顏色 */
+  --note__contentBorder: #85C35E;
+  /* 知識便利貼 - 內容標題顏色 */
+  --note__content-titleText: var(--primary-100);
+  /* 知識便利貼 - 表格外框顏色 */
+  --note__tableBorder: #85C35E;
+  /* 知識便利貼 - 表格表頭背景色 */
+  --note__tableHeadBG: #E1EFD6;
+  /* 知識便利貼 - 表格類別格背景色 */
+  --note__tableCategoryBG: #E1EFD6;
+  /* 知識便利貼 - 表格背景色 */
+  --note__tableContentBG: var(--primary-0);
+  /* 知識便利貼 - 表格內容範例 Tag 文字 */
+  --note__tableExampleText: var(--primary-100);
+  /* 知識便利貼 - 表格內容註解 Tag 文字 */
+  --note__tableCommentText: #A356E5;
+
+  /* 例題 - 知識點 - 標題 - 背景色 */
+  --exercise__titleBG: var(--exercise-100);
+  /* 例題 - 知識點 - 標題 - 數字顏色 */
+  --exercise__title-numberText: #FFFA2D;
+  /* 例題 - 知識點 - 標題 - 名稱背景色 */
+  --exercise__title-nameBG: var(--exercise-50);
+  /* 例題 - 知識點 - 標題 - 名稱顏色 */
+  --exercise__title-nameText: var(--primary-0);
+  /* 例題 - 知識點 - 外框顏色 */
+  --exercise__contentBorder: var(--exercise-100);
+
+  /* 例題 - 知識點(老師說) - 名稱背景色 */
+  --exercise-teacher__title-nameBG: #F28E1E;
+  /* 例題 - 知識點(老師說) - 名稱顏色 */
+  --exercise-teacher__title-nameText: var(--primary-0);
+  /* 例題 - 知識點(老師說答案) - 標籤背景色 */
+  --exercise-teacher__answerTag: #F28E1E;
+  /* 例題 - 知識點(老師說解析) - 標籤背景色 */
+  --exercise-teacher__resolveTag: #029E3E;
+  /* 例題 - 知識點(老師說解析) - 題目群組邊框色 */
+  --exercise-teacher__questionGroupBorder: #333333;
+
+  /* 例題 - 知識點(學生練) - 背景色 */
+  --exercise-student__contentBG: var(--exercise-10);
+  /* 例題 - 知識點(學生練) - 名稱背景色 */
+  --exercise-student__title-nameBG: #019F52;
+  /* 例題 - 知識點(學生練) - 名稱顏色 */
+  --exercise-student__title-nameText: var(--primary-0);
+  /* 例題 - 知識點(學生練答案) - 標籤背景色 */
+  --exercise-student__answerTag: #F28E1E;
+  /* 例題 - 知識點(學生練解析) - 標籤背景色 */
+  --exercise-student__resolveTag: #029E3E;
+  /* 例題 - 知識點(學生練解析) - 題目群組邊框色 */
+  --exercise-student__questionGroupBorder: #333333;
+
+  /* 例題 - 知識點(段考精選) - 標題 - 背景色 */
+  --exercise-examination__titleBG: var(--primary-100);
+  /* 例題 - 知識點(段考精選) - 標題 - 數字顏色 */
+  --exercise-examination__title-numberText: #FFFA2D;
+  /* 例題 - 知識點(段考精選) - 標題 - 名稱背景色 */
+  --exercise-exam__title-nameBG: var(--primary-80);
+  /* 例題 - 知識點(段考精選) - 名稱(文字-段考精選)背景色 */
+  --exercise-examination__title-nameBG: #7663AB;
+  /* 例題 - 知識點(段考精選) - 名稱(文字-段考精選)顏色 */
+  --exercise-examination__title-nameText: var(--primary-0);
+  /* 例題 - 知識點(段考精選答案) - 外框顏色 */
+  --exercise-examination__contentBorder: var(--primary-100);
+  /* 例題 - 知識點(段考精選答案) - 標籤背景色 */
+  --exercise-examination__answerTag: #F28E1E;
+  /* 例題 - 知識點(段考精選解析) - 標籤背景色 */
+  --exercise-examination__resolveTag: #029E3E;
+
+  /* 例題 - 表格外框顏色 */
+  --exercise__tableBorder: var(--exercise-100);
+  /* 例題 - 表格表頭背景色 */
+  --exercise__tableHeadBG: var(--exercise-30);
+  /* 例題 - 表格類別格背景色 */
+  --exercise__tableCategoryBG: var(--exercise-10);
+  /* 例題 - 表格背景色 */
+  --exercise__tableContentBG: var(--primary-0);
+  /* 例題 - 表格內容範例 Tag 文字 */
+  --exercise__tableExampleText:  var(--primary-100);
+  /* 例題 - 表格內容註解 Tag 文字 */
+  --exercise__tableCommentText: #A356E5;
+
+  /* 綜合練習 - 標題 - 章節背景色 */
+  --practice__title-chapterBG: #ED6004;
+  /* 綜合練習 - 標題 - 文字背景色 */
+  --practice__title-wordBG: #24A9A1;
+  /* 綜合練習 - 答案標籤背景色 */
+  --practice__title__answerTag: #F28E1E;
+  /* 綜合練習 - 解析標籤背景色 */
+  --practice__title__resolveTag: #029E3E;
+  /* 綜合練習 - 題目群組邊框色 */
+  --practice__questionGroupBorder: #333333;
+
+  /* 純色 */
+  --white: #ffffff;
+  /* 藍點 */
+  --bluePoint: #008CD6;
+  /* 非選題標籤 */
+  --blackTag: #252525;
+
+  /* margin + padding */
+  --space__chapter: 120px;
+  --space__0: 80px;
+  --space__1: 48px;
+  --space__2: 32px;
+  --space__3: 24px;
+  --space__4: 18px;
+  --space__5: 12px;
+  --space__6: 8px;
+
+  /* font-size */
+  /* 120px = 7.5em; */
+  --font-size__chapterNumber: 7.5em;
+  /* 64px = 4em; */
+  --font-size__h0: 4em;
+  /* 32px = 2em; */
+  --font-size__h1: 2em;
+  /* 28px = 1.75em; */
+  --font-size__h2: 1.75em;
+  /* 24px = 1.5em; */
+  --font-size__h3: 1.5em;
+  /* 20px = 1.25em; */
+  --font-size__h4: 1.25em;
+  /* 16px = 1em; */
+  --font-size__h5: 1em;
+  /* 14px = 0.875em */
+  --font-size__h6: 0.875em;
+  /* 12px = 0.75em */
+  --font-size__h7: 0.75em;
+}

@@ -1,0 +1,292 @@
+.h0 {
+  /* 64px = 4em; */
+  font-size: var(--font-size__h0);
+}
+
+.h1 {
+  /* 32px = 2em; */
+  font-size: var(--font-size__h1);
+}
+
+@media (min-width:768px) {
+  .h1 {
+    /* 24px = 1.5em; */
+    font-size: var(--font-size__h3);
+  }
+}
+
+.h2 {
+  /* 28px = 1.75em; */
+  font-size: var(--font-size__h2);
+}
+
+@media (min-width:768px) {
+  .h2 {
+    /* 20px = 1.25em; */
+    font-size: var(--font-size__h4);
+  }
+}
+
+.h3 {
+  /* 24px = 1.5em; */
+  font-size: var(--font-size__h3);
+}
+
+@media (min-width:768px) {
+  .h3 {
+    /* 16px = 1em; */
+    font-size: var(--font-size__h5);
+  }
+}
+
+.h4 {
+  /* 20px = 1.25em; */
+  font-size: var(--font-size__h4);
+}
+
+@media (min-width:768px) {
+  .h4 {
+    /* 16px = 1em; */
+    font-size: var(--font-size__h5);
+  }
+}
+
+.h5 {
+  /* 16px = 1em; */
+  font-size: var(--font-size__h5);
+}
+
+.h6 {
+  /* 14px = 0.875em */
+  font-size: var(--font-size__h6);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* 顏色 */
+.text-red {
+  color: #D82123 !important;
+}
+
+.text-blue {
+  color: #296EB7 !important;
+}
+
+/* 寬度 */
+.w-5 {
+  width: 5% !important;
+  height: fit-content;
+}
+
+.w-10 {
+  width: 10% !important;
+  height: fit-content;
+}
+
+.w-15 {
+  width: 15% !important;
+  height: fit-content;
+}
+
+.w-20 {
+  width: 20% !important;
+  height: fit-content;
+}
+
+.w-25 {
+  width: 25% !important;
+  height: fit-content;
+}
+
+.w-30 {
+  width: 30% !important;
+  height: fit-content;
+}
+
+.w-33 {
+  width: 33% !important;
+  height: fit-content;
+}
+
+.w-35 {
+  width: 35% !important;
+  height: fit-content;
+}
+
+.w-40 {
+  width: 40% !important;
+  height: fit-content;
+}
+
+.w-45 {
+  width: 45% !important;
+  height: fit-content;
+}
+
+.w-50 {
+  width: 50% !important;
+  height: fit-content;
+}
+
+.w-55 {
+  width: 55% !important;
+  height: fit-content;
+}
+
+.w-60 {
+  width: 60% !important;
+  height: fit-content;
+}
+
+.w-65 {
+  width: 65% !important;
+  height: fit-content;
+}
+
+.w-67 {
+  width: 67% !important;
+  height: fit-content;
+}
+
+.w-70 {
+  width: 70% !important;
+  height: fit-content;
+}
+
+.w-75 {
+  width: 75% !important;
+  height: fit-content;
+}
+
+.w-80 {
+  width: 80% !important;
+  height: fit-content;
+}
+
+.w-85 {
+  width: 85% !important;
+  height: fit-content;
+}
+
+.w-90 {
+  width: 90% !important;
+  height: fit-content;
+}
+
+.w-95 {
+  width: 95% !important;
+  height: fit-content;
+}
+
+.w-100 {
+  width: 100% !important;
+  height: fit-content;
+}
+
+/* 行內圖片 */
+.inline-image {
+  display: inline;
+  vertical-align: bottom;
+}
+
+/* 浮動左邊圖片 */
+.float-left-image {
+  float: left;
+  margin: var(--space__6);
+  padding: var(--space__6);
+  text-align: left;
+}
+
+/* 浮動右邊圖片 */
+.float-right-image {
+  float: right;
+  margin: var(--space__6);
+  padding: var(--space__6);
+  text-align: right;
+}
+
+/* 區塊圖片 */
+.block-image {
+  display: block;
+  padding-top: var(--space__6);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 彈性盒圖片 */
+.flex-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space__3);
+}
+
+/* 圖片基本設定 */
+.float-left-image img,
+.float-right-image img,
+.block-image img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
+/* 行內圖片基本設定 */
+.inline-image img {
+  padding-top: var(--space__5);
+}
+
+/* 轉型成彈性盒 */
+.d-flex {
+  display: flex;
+}
+
+/* tr 下方加虛線 */
+.tr_dash {
+  border-bottom: 3px dashed var(--keyPoint__tableBorder) !important;
+}
+
+/* 灰色區塊 */
+.paper-block {
+  padding: 10px;
+  border-radius: 8px;
+  width: 70%;
+  background-color: #ccc;
+  box-shadow: 3px 3px #0000005d;
+  overflow: visible;
+  text-indent: 0em;
+}
+
+/* 文字縮排 2 字元 */
+.text-indent-2 {
+  text-indent: 2em;
+}
+
+/* 行內置頂對齊 */
+.vertical-top {
+  vertical-align: top !important;
+}
+
+/* 圖片基本設定 */
+.block-table table {
+  width: 100%;
+}
+
+/* 兩頁時顯示，單頁時隱藏 */
+.col-1-hidden {
+  display: none !important;
+
+  @media screen and (min-width:768px) {
+    display: block !important;
+  }
+}
+
+/* 兩頁時隱藏，單頁時顯示 */
+.col-2-hidden {
+  display: block !important;
+
+  @media screen and (min-width:768px) {
+    display: none !important;
+  }
+}
